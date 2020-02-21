@@ -1,0 +1,50 @@
+
+使えるサーバーの選び方
+
+このサーバー一覧で現在動いているサーバーを確認
+heightを目安にするがpeerサーバーはhightが出ていない
+もっともapiサーバーにアクセスしないとapiは答えてくれない
+
+https://symbolnodes.org/nodes/
+
+このサーバーは現在のheightを示してくれるのでそのheightをもとにサーバーを選ぶ
+大きすぎる値は以前のバージョンが残っている
+小さすぎる値は途中で稼働が止まっている
+下記のエクスプローラーと同じか１つ違いまでが許容範囲
+http://explorer-xym.nemtech.network
+
+現在nemtechがメンテしているサーバー群
+現時点では信用できる
+ただし数日前にSDKの新バージョンが出ると発表があったのでそれが出ればテストネットはリセットして１から始まる
+
+
+http://api-xym-harvest-3-01.eu-west-1.nemtech.network:3000
+http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000
+http://api-xym-3-01.us-west-2.nemtech.network:3000
+http://api-xym-3-01.ap-southeast-1.nemtech.network:3000
+
+
+それを踏まえた上で上記のサーバーからランダムに選んでapiを実行するためのプログラム
+あくまでnodeを選ぶ部分のみ（python3）
+
+プログラム例
+ーーーーーーーーーーーーーーーー
+import json
+import requests
+import random
+
+node  = random.choice(("http://api-xym-harvest-3-01.eu-west-1.nemtech.network:3000",\
+"http://api-xym-harvest-3-01.us-west-2.nemtech.network:3000","http://api-xym-3-01.us-west-2.nemtech.network:3000",\
+"http://api-xym-3-01.ap-southeast-1.nemtech.network:3000"));
+
+
+api = '/node/info'
+
+url = str(node + api )
+
+print(url)
+
+r = requests.get(url).json()
+
+print(json.dumps(r,indent=4))
+

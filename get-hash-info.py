@@ -3,7 +3,7 @@ import json
 import sys
 args = sys.argv
 
-url = 'https://catapult-test.opening-line.jp:3001'
+url = 'http://api-xym-harvest-3-01.eu-west-1.nemtech.network:3000/'
 #api = 'account/transfers/'
 api = 'account/'
 

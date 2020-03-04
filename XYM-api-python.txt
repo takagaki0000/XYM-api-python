@@ -16,7 +16,8 @@ get_node_info01.py   get_serverで使えるサーバーと書いてる各サー�
 
 get_info_own-server01.py  自分の建てたサーバーの情報　peerの情報は量が多いので１０秒待って最後に表示
 
-get-hash-info.py  トランザクションを投げたときなどhash値をチェックしたい場合に引数として与えるとデータを表示
+getacca-incoming-01.py  incomingのデータ表示　アドレスはとりあえず作ったもの
+　　　　　　　　　　　　　　　　通常送り主のアドレスがhex表示なのでそれを元のようなbase32にエンコードしてる
 
 随時追加する予定です
 

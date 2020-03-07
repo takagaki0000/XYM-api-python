@@ -19,6 +19,11 @@ get_info_own-server01.py  自分の建てたサーバーの情報　peerの情�
 getacca-incoming-01.py  incomingのデータ表示　アドレスはとりあえず作ったもの
 　　　　　　　　　　　　　　　　通常送り主のアドレスがhex表示なのでそれを元のようなbase32にエンコードしてる
 
+getlast-id-out.py     outgoingのデータから最新のトランザクションのIDを見て、それとincomingのデータを
+　　　　　　　　　　　　　　比較する。incomingが古ければ新しいデータはないのでdata is oldと表示
+　　　　　　　　　　　　　　新しければ　data is newと表示
+
+
 随時追加する予定です
 
 

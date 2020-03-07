@@ -1,6 +1,8 @@
 
 NEM２　　＞＞　XYMのapiをpython3で叩いて情報を得る小プログラム
 
+testnetのサーバーはネットワークが変更されたら新しいものに置き換えて下さい
+
 部品
 
 get_server     使えるサーバーからランダムに選ぶルーチンとサーバーの選び方
@@ -22,6 +24,9 @@ getacca-incoming-01.py  incomingのデータ表示　アドレスはとりあえ
 getlast-id-out.py     outgoingのデータから最新のトランザクションのIDを見て、それとincomingのデータを
 　　　　　　　　　　　　　　比較する。incomingが古ければ新しいデータはないのでdata is oldと表示
 　　　　　　　　　　　　　　新しければ　data is newと表示
+
+get-hash-info.py   トランザクション送ったときにhashが表示されるので、python3 get-hash-info.py  hash値　でhashのデータを表示、エラーが無くてもトランザクションが作られてない場合の確認用
+
 
 
 随時追加する予定です
